@@ -2,3 +2,6 @@
 .vscode
 .conda
 -.gitignore
+build
+*info
+__pycache__

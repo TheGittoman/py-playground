@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name="Playground-project",
     version="1.0.0",
-    packages=["main"],
+    packages=["src"],
     install_requires=[
         "numpy>=1.18.1",
         "pandas>=1.0.3",
