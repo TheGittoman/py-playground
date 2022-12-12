@@ -4,9 +4,7 @@ import pandas as pd
 
 # func given a number return 0 odd and 1 if even
 def isEven(number):
-    if number % 2 != 0:
-        return 0
-    return 1
+    return 0 if number % 2 != 0 else 1
 
 
 def main():
