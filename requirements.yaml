@@ -1,0 +1,6 @@
+name: Playground-project
+channels:
+  - defaults
+dependencies:
+  - numpy>=1.18.1
+  - pandas>=1.0.3
