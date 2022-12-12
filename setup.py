@@ -8,6 +8,9 @@ setup(
         "numpy>=1.18.1",
         "pandas>=1.0.3",
     ],
+    entry_points={
+        'console_scripts': ['my-command=src.main:main']
+    },
     author="Tomi Vartiainen",
     author_email="your_name@example.com",
     description="Playground for practising python programming",
