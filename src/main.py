@@ -1,14 +1,22 @@
-import numpy as np
-import pandas as pd
+import galai as gl
+import sys
 
 
-# func given a number return 0 odd and 1 if even
-def isEven(number):
-    return 0 if number % 2 != 0 else 1
+def sanitiseArguments(argsv):
+    if len(argsv) > 2 or len(argsv) <= 1:
+        return False
+    return True
 
 
 def main():
-    print("hello world!")
+    if sanitiseArguments(sys.argv):
+        print("loading the model-----")
+        model = gl.load_model(name="standard", num_gpus=1)
+        print("model loaded----------")
+        print("starting generation---")
+        output = model.generate(sys.argv[1], max_length=400)
+        print("Result:\n", output)
+    print("Exiting the program")
 
 
 # if this script is ran directly run main
