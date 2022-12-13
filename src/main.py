@@ -1,14 +1,24 @@
-import numpy as np
-import pandas as pd
+import json
+import re
 
 
-# func given a number return 0 odd and 1 if even
-def isEven(number):
-    return 0 if number % 2 != 0 else 1
+class movieWatchlist():
+    def __init__(self, fileName):
+        with open(fileName, "r") as file:
+            self.data = json.load(file)
+
+    def print(self):
+        print("total amount of movies in this list:",
+              self.data['movie_watchlist']['total'])
+        for key in self.data['titles']:
+            print(self.data['titles'][key]["primary"]["title"])
 
 
 def main():
-    print("hello world!")
+
+    # pattern = re.compile("\"tt*\"")
+    watchlist = movieWatchlist("data/data.json")
+    watchlist.print()
 
 
 # if this script is ran directly run main
