@@ -7,6 +7,7 @@ setup(
     install_requires=[
         "numpy>=1.18.1",
         "pandas>=1.0.3",
+        "opencv>=4.6.0",
     ],
     entry_points={
         'console_scripts': ['my-command=src.main:main']

@@ -4,3 +4,4 @@ channels:
 dependencies:
   - numpy>=1.18.1
   - pandas>=1.0.3
+  - opencv>=4.6.0
